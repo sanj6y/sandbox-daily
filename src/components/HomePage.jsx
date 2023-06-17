@@ -87,7 +87,7 @@ const HomePage = () => {
         </div>
         <div
           onClick={handleNav}
-          className="flex flex-col justify-center md:hidden"
+          className="flex flex-col justify-center md:hidden hover:cursor-pointer"
         >
           {!nav ? <RiCloseFill size={30} /> : <RiMenu3Fill size={25} />}
         </div>
@@ -101,13 +101,11 @@ const HomePage = () => {
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
-              <li className="w-fit p-4 hover:cursor-pointer">HOME</li>
-              <li className="w-fit p-4 hover:cursor-pointer">ABOUT</li>
-              <li href="/services" className="w-fit p-4 hover:cursor-pointer">
-                SERVICES
-              </li>
-              <li className="w-fit p-4 hover:cursor-pointer">ARTICLES</li>
-              <li className="w-fit p-4 hover:cursor-pointer">CONTACT</li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">HOME</li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ABOUT</li>
+              <li href="/services" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">SERVICES</li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ARTICLES</li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">CONTACT</li>
             </ul>
           </div>
         </div>
