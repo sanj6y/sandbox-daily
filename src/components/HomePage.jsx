@@ -84,6 +84,9 @@ const HomePage = () => {
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
           <img src={logo} alt="sandbox-logo" className="w-12"/>
+          <h1 className = "font-bold text-3xl">
+            Sandbox
+          </h1>
         </div>
         <div
           onClick={handleNav}
