@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "homepage": "https://justin-huiyun-lee.github.io/",
+=======
+  "homepage": ".",
+>>>>>>> 5f516895ff9df5b01a5f630885a5fcc0ee06de87
   "name": "sandbox-prototype-1",
   "version": "0.1.0",
   "private": true,
