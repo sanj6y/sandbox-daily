@@ -242,11 +242,11 @@ const HomePage = () => {
           <div className="flex flex-row justify-center">
             <div className="flex flex-col justify-center">
               <div className="text-5xl grid grid-cols-5 w-fit gap-5 text-white">
-                <FaInstagramSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#d62976] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" />
-                <FaTwitterSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#00acee] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" />
-                <FaYoutubeSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#c4302b] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" />
-                <FaLinkedin className="hover:cursor-pointer bg-[--bg-white] hover:text-[#0077B5] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" />
-                <FaFacebookSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#3b5998] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" />
+                <a href = "https://www.instagram.com/sandboxdaily/?igshid=MWQ1ZGUxMzBkMA%3D%3D" target={"_blank"} rel="noreferrer"><FaInstagramSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#d62976] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" /></a>
+                <a href = "https://www.instagram.com/sandboxdaily/?igshid=MWQ1ZGUxMzBkMA%3D%3D" target={"_blank"} rel="noreferrer"><FaTwitterSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#00acee] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" /></a>
+                <a href = "https://www.instagram.com/sandboxdaily/?igshid=MWQ1ZGUxMzBkMA%3D%3D" target={"_blank"} rel="noreferrer"><FaYoutubeSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#c4302b] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" /></a>
+                <a href = "https://www.instagram.com/sandboxdaily/?igshid=MWQ1ZGUxMzBkMA%3D%3D" target={"_blank"} rel="noreferrer"><FaLinkedin className="hover:cursor-pointer bg-[--bg-white] hover:text-[#0077B5] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" /></a>
+                <a href = "https://www.instagram.com/sandboxdaily/?igshid=MWQ1ZGUxMzBkMA%3D%3D" target={"_blank"} rel="noreferrer"><FaFacebookSquare className="hover:cursor-pointer bg-[--bg-white] hover:text-[#3b5998] hover:scale-110 hover:-translate-y-2 hover:shadow-2xl ease-in-out duration-200" /></a>
               </div>
             </div>
           </div>
