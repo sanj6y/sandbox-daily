@@ -100,7 +100,7 @@ const HomePage = () => {
               ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-300 bg-gray-50 ease-in-out duration-500"
               : "fixed left-[-100%] top-0 ease-in-out duration-200"
           }
-          
+
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
@@ -122,10 +122,10 @@ const HomePage = () => {
           <button
             className="hover:text-gray-500 ease-in-out duration-200"
           >
-            <a href = "/servicesBtn">SERVICES</a>
+            <a href = "/services">SERVICES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
-            ARTICLES
+            <a href = "/articles">ARTICLES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
             CONTACT

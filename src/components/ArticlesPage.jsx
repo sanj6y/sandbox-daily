@@ -32,13 +32,13 @@ const ArticlesPage = () => {
 
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75 pb-5vh">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
-          <img src={logo} alt="sandbox-logo" className="w-12"/>
+          <img src={logo} alt="sandbox-logo" className="w-12" />
         </div>
         <div
           onClick={handleNav}
           className="flex flex-col justify-center md:hidden hover:cursor-pointer"
         >
-          {!nav ? < RiCloseFill size={30} /> : <RiMenu3Fill size={25} />}
+          {!nav ? <RiCloseFill size={30} /> : <RiMenu3Fill size={25} />}
         </div>
         <div
           className={
@@ -50,11 +50,24 @@ const ArticlesPage = () => {
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">HOME</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ABOUT</li>
-              <li href="/services" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">SERVICES</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ARTICLES</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">CONTACT</li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
+                HOME
+              </li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
+                ABOUT
+              </li>
+              <li
+                href="/services"
+                className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200"
+              >
+                SERVICES
+              </li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
+                ARTICLES
+              </li>
+              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
+                CONTACT
+              </li>
             </ul>
           </div>
         </div>
@@ -65,10 +78,8 @@ const ArticlesPage = () => {
           <button className="hover:text-gray-500 ease-in-out duration-200">
             ABOUT
           </button>
-          <button
-            className="hover:text-gray-500 ease-in-out duration-200"
-          >
-            <a href = "/servicesBtn">SERVICES</a>
+          <button className="hover:text-gray-500 ease-in-out duration-200">
+            <a href="/servicesBtn">SERVICES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
             ARTICLES
@@ -79,38 +90,44 @@ const ArticlesPage = () => {
         </div>
       </nav>
 
-      <div className="grid md:grid-cols-4 gap-5" style={{ paddingTop: "8vh" }}>
-        <div className="bg-gray-100 h-[80vh] md:ml-3 flex flex-col justify-between p-4 items-center shadow-gray-200 shadow-md overflow-hidden border-8 border-gray-100">
-          <p className="md:text-3xl sm:text-2xl text-xl font-bold">
-            Sandbox Mobile
-          </p>
-          <p className="md:text-2xl sm:text-xl text-lg max-w-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit...
-          </p>
-        </div>
-        <div className="bg-gray-100 h-[80vh] md:mr-3 flex flex-col justify-between p-4 items-center shadow-gray-200 shadow-md overflow-hidden border-8 border-gray-100">
-          <p className="md:text-3xl sm:text-2xl text-xl font-bold">
-            Sandbox Finance Manager
-          </p>
-          <p className="md:text-2xl sm:text-xl text-lg max-w-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit...
-          </p>
-        </div>
-        <div className="bg-gray-100 h-[80vh] md:ml-3 flex flex-col justify-between p-4 items-center shadow-gray-200 shadow-md overflow-hidden border-8 border-gray-100">
-          <p className="md:text-3xl sm:text-2xl text-xl font-bold -mt-8">
-            Sandbox Lorem Ipsum
-          </p>
-          <p className="md:text-2xl sm:text-xl text-lg max-w-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit...
-          </p>
-        </div>
-        <div className="bg-gray-100 h-[80vh] md:mr-3 flex flex-col justify-between p-4 items-center shadow-gray-200 shadow-md overflow-hidden border-8 border-gray-100">
-          <p className="md:text-3xl sm:text-2xl text-xl font-bold">
-            Sandbox another thing
-          </p>
-          <p className="md:text-2xl sm:text-xl text-lg max-w-md">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit...
-          </p>
+      <div className="flex flex-row justify-center">
+        <div className="grid md:grid-cols-4 gap-5 pt-16 min-w-[70vw] h-screen">
+          <div className = "flex flex-col justify-between bg-black max-w-sm">
+            <h1>Article 1</h1>
+            <p>
+              A preview of content here: Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Architecto, accusantium provident esse odio aut
+              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
+              voluptatibus quia ipsam obcaecati eius?
+            </p>
+          </div>
+          <div className = "flex flex-col justify-between bg-black">
+            <h1>Article 1</h1>
+            <p>
+              A preview of content here: Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Architecto, accusantium provident esse odio aut
+              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
+              voluptatibus quia ipsam obcaecati eius?
+            </p>
+          </div>
+          <div className = "flex flex-col justify-between bg-black">
+            <h1>Article 1</h1>
+            <p>
+              A preview of content here: Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Architecto, accusantium provident esse odio aut
+              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
+              voluptatibus quia ipsam obcaecati eius?
+            </p>
+          </div>
+          <div className = "flex flex-col justify-between bg-black">
+            <h1>Article 1</h1>
+            <p>
+              A preview of content here: Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Architecto, accusantium provident esse odio aut
+              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
+              voluptatibus quia ipsam obcaecati eius?
+            </p>
+          </div>
         </div>
       </div>
 
