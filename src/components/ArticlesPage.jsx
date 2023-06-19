@@ -8,9 +8,59 @@ import {
   FaLinkedin,
   FaFacebookSquare,
 } from "react-icons/fa";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-
 import ex1 from "../assets/example-img-1.jpeg";
+
+const Cards = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <>
+      <div className="card bg-white w-80 max-h-96 rounded-xl shadow-lg overflow-hidden">
+        <div className="w-full h-36">
+          <img
+            className="object-cover w-full h-full rounded-t-xl"
+            src={ex1}
+            alt="Article Header"
+          />
+        </div>
+        <div className="w-full text-2xl font-semibold h-8 text-center p-4 text-black">
+          <p>Article Title</p>
+        </div>
+        <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
+          <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              officiis enim sapiente quibusdam obcaecati consequatur delectus
+              dignissimos perferendis quos culpa saepe deleniti suscipit dolores
+              aliquid officia. Maiores ipsam nihil facilis? Quia voluptates
+              quibusdam vero non dolorum doloremque accusantium voluptate quis,
+              quas odio corrupti a. Debitis aliquid sunt reiciendis incidunt
+              iure esse asperiores omnis quia nisi, assumenda rerum laboriosam
+              cum possimus. Harum quisquam dolorem maiores repudiandae assumenda
+              tenetur soluta quas temporibus architecto. Atque, odio fugit. Eius
+              in, quam nisi sunt magni nobis fuga rem. Labore debitis, dolorem
+              fugiat eos assumenda at.
+            </p>
+            {!isExpanded && (
+              <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                <p
+                  className="text-blue-500 cursor-pointer"
+                  onClick={toggleExpand}
+                >
+                  Read More
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 const ArticlesPage = () => {
   const [nav, setNav] = useState(true);
@@ -19,20 +69,13 @@ const ArticlesPage = () => {
     setNav(!nav);
   };
 
-  const scrollLeft = () => {
-    document.getElementById("content").scrollLeft -= 400;
-  };
-  const scrollRight = () => {
-    document.getElementById("content").scrollLeft += 400;
-  };
-
   return (
     <div>
       {/* NAVBAR */}
-
-      <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75 pb-5vh">
+      <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
           <img src={logo} alt="sandbox-logo" className="w-12" />
+          <h1 className="font-bold text-3xl tracking-wide px-4">Sandbox</h1>
         </div>
         <div
           onClick={handleNav}
@@ -46,7 +89,6 @@ const ArticlesPage = () => {
               ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-300 bg-gray-50 ease-in-out duration-500"
               : "fixed left-[-100%] top-0 ease-in-out duration-200"
           }
-          s
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
@@ -79,10 +121,10 @@ const ArticlesPage = () => {
             ABOUT
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
-            <a href="/servicesBtn">SERVICES</a>
+            <a href="/services">SERVICES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
-            ARTICLES
+            <a href="/articles">ARTICLES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
             CONTACT
@@ -90,43 +132,40 @@ const ArticlesPage = () => {
         </div>
       </nav>
 
-      <div className="flex flex-row justify-center">
-        <div className="grid md:grid-cols-4 gap-5 pt-16 min-w-[70vw] h-screen">
-          <div className = "flex flex-col justify-between bg-black max-w-sm">
-            <h1>Article 1</h1>
-            <p>
-              A preview of content here: Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Architecto, accusantium provident esse odio aut
-              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
-              voluptatibus quia ipsam obcaecati eius?
-            </p>
-          </div>
-          <div className = "flex flex-col justify-between bg-black">
-            <h1>Article 1</h1>
-            <p>
-              A preview of content here: Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Architecto, accusantium provident esse odio aut
-              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
-              voluptatibus quia ipsam obcaecati eius?
-            </p>
-          </div>
-          <div className = "flex flex-col justify-between bg-black">
-            <h1>Article 1</h1>
-            <p>
-              A preview of content here: Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Architecto, accusantium provident esse odio aut
-              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
-              voluptatibus quia ipsam obcaecati eius?
-            </p>
-          </div>
-          <div className = "flex flex-col justify-between bg-black">
-            <h1>Article 1</h1>
-            <p>
-              A preview of content here: Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Architecto, accusantium provident esse odio aut
-              quia labore, dolores, sit libero at impedit qui neque sequi! Quae
-              voluptatibus quia ipsam obcaecati eius?
-            </p>
+      <div>
+        <div className="flex flex-row justify-center">
+          <h1 className="text-5xl font-bold mt-24">ARTICLES</h1>
+        </div>
+        <div className="flex flex-row justify-center">
+          <hr className=" w-11/12 h-1 mt-4 bg-gray-200 border-none rounded-full" />
+        </div>
+        <div className="flex flex-row justify-center mt-16">
+          <div className="grid md:grid-cols-3 gap-5 pt-16 h-screen text-white overflow-y-scroll">
+            {/* The article grid system is kinda like matrices. READ COMMENTS TO UNDERSTAND */}
+            <div>
+              <Cards /> {/* 1st row, 1st column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 1st row, 2nd column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 1st row, 3rd column */}
+              <div className="p-4"></div>
+            </div>
+            <div>
+              <Cards /> {/* 2nd row, 1st column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 2nd row, 2nd column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 2nd row, 3rd column */}
+              <div className="p-4"></div>
+            </div>
+            <div>
+              <Cards /> {/* 3nd row, 1st column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 3nd row, 2nd column */}
+              <div className="p-4"></div>
+              <Cards /> {/* 3nd row, 3rd column */}
+              <div className="p-4"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -147,7 +186,7 @@ const ArticlesPage = () => {
               placeholder="Type Email"
             ></input>
             <input
-              className="p-4 border-4 border-gray-400 text-gray-500 rounded-md"
+              className="p-4 border-4 border-gray-400 text-gray-500 rounded-md hover:cursor-pointer"
               type={"submit"}
               value="Subscribe"
             ></input>
