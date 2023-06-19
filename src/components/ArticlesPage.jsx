@@ -12,6 +12,8 @@ import ex1 from "../assets/example-img-1.jpeg";
 
 const Cards = (contentIndex) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const articleTags = new Array(7);
+
 
   const title = ["Article 1", "Article 2", "Article 3"];
 
@@ -25,8 +27,22 @@ const Cards = (contentIndex) => {
     setIsExpanded(!isExpanded);
   };
 
+  const show = (clickedTags) => {
+    let haveAnyBeenClicked = false;
+    for (let i = 0; i < articleTags.length; i++){
+        if (clickedTags[i] === true && articleTags[i] === clickedTags[i])
+            return true;
+        else if (clickedTags[i] === true)
+          haveAnyBeenClicked = true;
+    }
+
+    if (haveAnyBeenClicked === false)
+      return true;
+
+    return false;
+  }
   return (
-    <>
+      
       <div className="card bg-white w-80 max-h-96 rounded-xl shadow-lg overflow-hidden">
         <div className="w-full h-36">
           <img
@@ -40,7 +56,16 @@ const Cards = (contentIndex) => {
         </div>
         <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
           <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
+<<<<<<< Updated upstream
             <p>{content[contentIndex]}</p>
+=======
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              officiis enim sapiente quibusdam obcaecati consequatur delectus
+              dignissimos perferendis quos culpa saepe deleniti suscipit dolores
+              aliquid officia.
+            </p>
+>>>>>>> Stashed changes
             {!isExpanded && (
               <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
                 <p
@@ -54,19 +79,24 @@ const Cards = (contentIndex) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
 const ArticlesPage = () => {
   const [nav, setNav] = useState(true);
 
+  let tagsClicked = new Array(7, useState(false));
+  
   const handleNav = () => {
     setNav(!nav);
   };
 
+  const toggleTagged = (buttonTagged) => {
+    tagsClicked[buttonTagged] = !tagsClicked[buttonTagged];
+  }
+
   return (
-    <div>
+    <div className = "overflow-x-hidden">
       {/* NAVBAR */}
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
@@ -129,12 +159,39 @@ const ArticlesPage = () => {
       </nav>
 
       <div>
+        
         <div className="flex flex-row justify-center">
           <h1 className="text-5xl font-bold mt-24">ARTICLES</h1>
-        </div>
+        </div> 
         <div className="flex flex-row justify-center">
           <hr className=" w-11/12 h-1 mt-4 bg-gray-200 border-none rounded-full" />
         </div>
+        <div className="flex flex-row justify-center">
+          <div className="grid grid-cols-4 px-5 md:grid-cols-7 gap-5 text-white mt-4">
+            <button class="onClick={() => toggleTagged(0)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Money and Banking
+            </button>
+            <button class="onClick={() => toggleTagged(1)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Financial Economics
+            </button>
+            <button class="onClick={() => toggleTagged(2)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Financial Management
+            </button>
+            <button class="onClick={() => toggleTagged(3)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Investments
+            </button>
+            <button class="onClick={() => toggleTagged(4)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Public Finance
+            </button>
+            <button class="onClick={() => toggleTagged(5)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Personal Finance
+            </button>
+            <button class="onClick={() => toggleTagged(6)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+              Financial Derivatives
+            </button>
+          </div>
+        </div>
+
         <div className="flex flex-row justify-center mt-16">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-rows-3 gap-5 pt-16 h-fit text-white">
             <div>{Cards(0)}</div>
