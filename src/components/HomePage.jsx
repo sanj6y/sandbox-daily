@@ -100,7 +100,7 @@ const HomePage = () => {
               ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-300 bg-gray-50 ease-in-out duration-500"
               : "fixed left-[-100%] top-0 ease-in-out duration-200"
           }
-          s
+          
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
