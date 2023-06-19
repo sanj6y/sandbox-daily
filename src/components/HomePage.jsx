@@ -143,7 +143,7 @@ const HomePage = () => {
           </span>
         </h1>
         <p className="font-semibold text-gray-300 pb-10">
-          Articles for those who need them Most.
+          Articles for those who need them most.
         </p>
         <button className="bg-gradient-to-tr from-[#B64100] to-[#B66D00] w-fit rounded-lg">
           <p className="p-4 text-white">Get Started</p>
