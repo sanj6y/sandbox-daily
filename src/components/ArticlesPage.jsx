@@ -56,17 +56,16 @@ const Cards = (contentIndex) => {
         </div>
         <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
           <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
-<<<<<<< Updated upstream
+
             <p>{content[contentIndex]}</p>
-=======
+
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
               officiis enim sapiente quibusdam obcaecati consequatur delectus
               dignissimos perferendis quos culpa saepe deleniti suscipit dolores
               aliquid officia.
             </p>
->>>>>>> Stashed changes
-            {!isExpanded && (
+             {!isExpanded && (
               <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
                 <p
                   className="text-blue-500 cursor-pointer"
