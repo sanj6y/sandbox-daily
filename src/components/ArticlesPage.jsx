@@ -10,8 +10,16 @@ import {
 } from "react-icons/fa";
 import ex1 from "../assets/example-img-1.jpeg";
 
-const Cards = () => {
+const Cards = (contentIndex) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const title = ["Article 1", "Article 2", "Article 3"];
+
+  const content = [
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt adipisci cumque at neque dolorem, eveniet quidem sunt voluptate laudantium sed delectus vel ipsam reprehenderit aliquam consequuntur sapiente quam eaque?",
+    "Lorem Ipsum #2",
+    "Lorem Ipsum #3",
+  ];
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -28,23 +36,11 @@ const Cards = () => {
           />
         </div>
         <div className="w-full text-2xl font-semibold h-8 text-center p-4 text-black">
-          <p>Article Title</p>
+          <p>{title[contentIndex]}</p>
         </div>
         <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
           <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
-              officiis enim sapiente quibusdam obcaecati consequatur delectus
-              dignissimos perferendis quos culpa saepe deleniti suscipit dolores
-              aliquid officia. Maiores ipsam nihil facilis? Quia voluptates
-              quibusdam vero non dolorum doloremque accusantium voluptate quis,
-              quas odio corrupti a. Debitis aliquid sunt reiciendis incidunt
-              iure esse asperiores omnis quia nisi, assumenda rerum laboriosam
-              cum possimus. Harum quisquam dolorem maiores repudiandae assumenda
-              tenetur soluta quas temporibus architecto. Atque, odio fugit. Eius
-              in, quam nisi sunt magni nobis fuga rem. Labore debitis, dolorem
-              fugiat eos assumenda at.
-            </p>
+            <p>{content[contentIndex]}</p>
             {!isExpanded && (
               <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
                 <p
@@ -140,33 +136,22 @@ const ArticlesPage = () => {
           <hr className=" w-11/12 h-1 mt-4 bg-gray-200 border-none rounded-full" />
         </div>
         <div className="flex flex-row justify-center mt-16">
-          <div className="grid md:grid-cols-3 gap-5 pt-16 h-screen text-white overflow-y-scroll">
-            {/* The article grid system is kinda like matrices. READ COMMENTS TO UNDERSTAND */}
-            <div>
-              <Cards /> {/* 1st row, 1st column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 1st row, 2nd column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 1st row, 3rd column */}
-              <div className="p-4"></div>
-            </div>
-            <div>
-              <Cards /> {/* 2nd row, 1st column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 2nd row, 2nd column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 2nd row, 3rd column */}
-              <div className="p-4"></div>
-            </div>
-            <div>
-              <Cards /> {/* 3nd row, 1st column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 3nd row, 2nd column */}
-              <div className="p-4"></div>
-              <Cards /> {/* 3nd row, 3rd column */}
-              <div className="p-4"></div>
-            </div>
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-rows-3 gap-5 pt-16 h-fit text-white">
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
+            <div>{Cards(0)}</div>
           </div>
+        </div>
+        <div className="flex flex-row justify-center">
+          <button className="bg-black text-white rounded-md my-9">
+            <p className="p-4">Load More</p>
+          </button>
         </div>
       </div>
 
