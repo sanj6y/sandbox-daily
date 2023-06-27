@@ -12,13 +12,11 @@ import ex1 from "../assets/example-img-1.jpeg";
 
 const Cards = (contentIndex) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const articleTags = new Array(7);
-
 
   const title = ["Article 1", "Article 2", "Article 3"];
 
   const content = [
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt adipisci cumque at neque dolorem, eveniet quidem sunt voluptate laudantium sed delectus vel ipsam reprehenderit aliquam consequuntur sapiente quam eaque?",
+    "Lorem Ipsum #1",
     "Lorem Ipsum #2",
     "Lorem Ipsum #3",
   ];
@@ -27,75 +25,80 @@ const Cards = (contentIndex) => {
     setIsExpanded(!isExpanded);
   };
 
-  const show = (clickedTags) => {
-    let haveAnyBeenClicked = false;
-    for (let i = 0; i < articleTags.length; i++){
-        if (clickedTags[i] === true && articleTags[i] === clickedTags[i])
-            return true;
-        else if (clickedTags[i] === true)
-          haveAnyBeenClicked = true;
-    }
-
-    if (haveAnyBeenClicked === false)
-      return true;
-
-    return false;
-  }
   return (
-      
-      <div className="card bg-white w-80 max-h-96 rounded-xl shadow-lg overflow-hidden">
-        <div className="w-full h-36">
-          <img
-            className="object-cover w-full h-full rounded-t-xl"
-            src={ex1}
-            alt="Article Header"
-          />
-        </div>
-        <div className="w-full text-2xl font-semibold h-8 text-center p-4 text-black">
-          <p>{title[contentIndex]}</p>
-        </div>
-        <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
-          <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
-
-            <p>{content[contentIndex]}</p>
-
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
-              officiis enim sapiente quibusdam obcaecati consequatur delectus
-              dignissimos perferendis quos culpa saepe deleniti suscipit dolores
-              aliquid officia.
-            </p>
-             {!isExpanded && (
-              <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
-                <p
-                  className="text-blue-500 cursor-pointer"
-                  onClick={toggleExpand}
-                >
-                  Read More
-                </p>
-              </div>
-            )}
-          </div>
+    <div className="card bg-white w-80 max-h-96 rounded-xl shadow-lg overflow-hidden">
+      <div className="w-full h-36">
+        <img
+          className="object-cover w-full h-full rounded-t-xl"
+          src={ex1}
+          alt="Article Header"
+        />
+      </div>
+      <div className="w-full text-2xl font-semibold h-8 text-center p-4 text-black">
+        <p>{title[contentIndex]}</p>
+      </div>
+      <div className="p-8 w-full h-80 text-gray-400 overflow-hidden relative">
+        <div className={`${isExpanded ? "h-full" : "h-64"} overflow-hidden`}>
+          <p>{content[contentIndex]}</p>
+          {!isExpanded && (
+            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+              <p
+                className="text-blue-500 cursor-pointer"
+                onClick={toggleExpand}
+              >
+                Read More
+              </p>
+            </div>
+          )}
         </div>
       </div>
+    </div>
   );
 };
 
 const ArticlesPage = () => {
   const [nav, setNav] = useState(true);
 
-  let tagsClicked = new Array(7, useState(false));
-  
+  const [tag1, setTag1] = useState(false);
+  const [tag2, setTag2] = useState(false);
+  const [tag3, setTag3] = useState(false);
+  const [tag4, setTag4] = useState(false);
+  const [tag5, setTag5] = useState(false);
+  const [tag6, setTag6] = useState(false);
+  const [tag7, setTag7] = useState(false);
+  const [tag8, setTag8] = useState(false);
+
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const toggleTagged = (buttonTagged) => {
-    tagsClicked[buttonTagged] = !tagsClicked[buttonTagged];
-  }
+  const handleTag1 = () => {
+    setTag1(!tag1);
+  };
+  const handleTag2 = () => {
+    setTag2(!tag2);
+  };
+  const handleTag3 = () => {
+    setTag3(!tag3);
+  };
+  const handleTag4 = () => {
+    setTag4(!tag4);
+  };
+  const handleTag5 = () => {
+    setTag5(!tag5);
+  };
+  const handleTag6 = () => {
+    setTag6(!tag6);
+  };
+  const handleTag7 = () => {
+    setTag7(!tag7);
+  };
+  const handleTag8 = () => {
+    setTag8(!tag8);
+  };
 
   return (
-    <div className = "overflow-x-hidden">
+    <div className="overflow-x-hidden">
       {/* NAVBAR */}
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
@@ -158,40 +161,82 @@ const ArticlesPage = () => {
       </nav>
 
       <div>
-        
         <div className="flex flex-row justify-center">
           <h1 className="text-5xl font-bold mt-24">ARTICLES</h1>
-        </div> 
+        </div>
         <div className="flex flex-row justify-center">
           <hr className=" w-11/12 h-1 mt-4 bg-gray-200 border-none rounded-full" />
         </div>
         <div className="flex flex-row justify-center">
-          <div className="grid grid-cols-4 px-5 md:grid-cols-7 gap-5 text-white mt-4">
-            <button class="onClick={() => toggleTagged(0)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+          <div className="grid grid-cols-4 gap-5 text-white mt-10">
+            <button
+              onClick={handleTag1}
+              className={`${
+                tag1 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
+            >
               Money and Banking
             </button>
-            <button class="onClick={() => toggleTagged(1)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag2}
+              className={`${
+                tag2 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+            >
               Financial Economics
             </button>
-            <button class="onClick={() => toggleTagged(2)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag3}
+              className={`${
+                tag3 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+            >
               Financial Management
             </button>
-            <button class="onClick={() => toggleTagged(3)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag4}
+              className={`${
+                tag4 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+            >
               Investments
             </button>
-            <button class="onClick={() => toggleTagged(4)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag5}
+              className={`${
+                tag5 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
+            >
               Public Finance
             </button>
-            <button class="onClick={() => toggleTagged(5)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag6}
+              className={`${
+                tag6 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+            >
               Personal Finance
             </button>
-            <button class="onClick={() => toggleTagged(6)} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto motion-safe:transition ease-in-out duration-300 flex justify-center items-center">
+            <button
+              onClick={handleTag7}
+              className={`${
+                tag7 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
+            >
               Financial Derivatives
+            </button>
+            <button
+              onClick={handleTag8}
+              className={`${
+                tag8 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
+              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
+            >
+              Whitepaper
             </button>
           </div>
         </div>
 
-        <div className="flex flex-row justify-center mt-16">
+        <div className="flex flex-row justify-center -mt-4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-rows-3 gap-5 pt-16 h-fit text-white">
             <div>{Cards(0)}</div>
             <div>{Cards(0)}</div>
