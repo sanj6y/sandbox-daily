@@ -173,7 +173,7 @@ const ArticlesPage = () => {
               onClick={handleTag1}
               className={`${
                 tag1 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
             >
               Money and Banking
             </button>
@@ -181,7 +181,7 @@ const ArticlesPage = () => {
               onClick={handleTag2}
               className={`${
                 tag2 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-x hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
             >
               Financial Economics
             </button>
@@ -189,7 +189,7 @@ const ArticlesPage = () => {
               onClick={handleTag3}
               className={`${
                 tag3 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
             >
               Financial Management
             </button>
@@ -197,7 +197,7 @@ const ArticlesPage = () => {
               onClick={handleTag4}
               className={`${
                 tag4 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
             >
               Investments
             </button>
@@ -205,7 +205,7 @@ const ArticlesPage = () => {
               onClick={handleTag5}
               className={`${
                 tag5 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms] py-4`}
             >
               Public Finance
             </button>
@@ -213,7 +213,7 @@ const ArticlesPage = () => {
               onClick={handleTag6}
               className={`${
                 tag6 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded ease-in-out duration-[400ms]`}
             >
               Personal Finance
             </button>
@@ -221,7 +221,7 @@ const ArticlesPage = () => {
               onClick={handleTag7}
               className={`${
                 tag7 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
             >
               Financial Derivatives
             </button>
@@ -229,7 +229,7 @@ const ArticlesPage = () => {
               onClick={handleTag8}
               className={`${
                 tag8 ? "bg-blue-500 text-white" : "bg-transparent text-blue-700"
-              } md:text-base sm:text-sm text-xs bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
+              } md:text-base sm:text-sm text-xs hover:bg-blue-500 font-semibold hover:text-white !px-4 border border-blue-500 hover:border-transparent rounded h-auto ease-in-out duration-[400ms]`}
             >
               Whitepaper
             </button>
