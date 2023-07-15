@@ -8,15 +8,15 @@ import {
   FaLinkedin,
   FaFacebookSquare,
 } from "react-icons/fa";
-import ex1 from "../assets/example-img-1.jpeg";
+import article1 from "../assets/images/image1.png";
 
 const Cards = (contentIndex) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const title = ["Article 1", "Article 2", "Article 3"];
+  const title = ["Understanding Credit", "Article 2", "Article 3"];
 
   const content = [
-    "Lorem Ipsum #1",
+    "What is credit? Is it really as complicated as we make it out to be?",
     "Lorem Ipsum #2",
     "Lorem Ipsum #3",
   ];
@@ -30,7 +30,7 @@ const Cards = (contentIndex) => {
       <div className="w-full h-36">
         <img
           className="object-cover w-full h-full rounded-t-xl"
-          src={ex1}
+          src={article1}
           alt="Article Header"
         />
       </div>
@@ -102,8 +102,10 @@ const ArticlesPage = () => {
       {/* NAVBAR */}
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
-          <img src={logo} alt="sandbox-logo" className="w-12" />
-          <h1 className="font-bold text-3xl tracking-wide px-4">Sandbox</h1>
+        <a href = "/home"><img src={logo} alt="sandbox-logo" className="w-12"/></a>
+          <h1 className = "font-bold text-3xl tracking-wide px-4">
+             Sandbox
+          </h1>
         </div>
         <div
           onClick={handleNav}
@@ -117,27 +119,15 @@ const ArticlesPage = () => {
               ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-300 bg-gray-50 ease-in-out duration-500"
               : "fixed left-[-100%] top-0 ease-in-out duration-200"
           }
+
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
-                HOME
-              </li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
-                ABOUT
-              </li>
-              <li
-                href="/services"
-                className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200"
-              >
-                SERVICES
-              </li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
-                ARTICLES
-              </li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">
-                CONTACT
-              </li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">HOME</li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ABOUT</li>
+              <li href="/services" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">SERVICES</li>
+              <li href = "/articles" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ARTICLES</li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">CONTACT</li>
             </ul>
           </div>
         </div>
@@ -148,11 +138,13 @@ const ArticlesPage = () => {
           <button className="hover:text-gray-500 ease-in-out duration-200">
             ABOUT
           </button>
-          <button className="hover:text-gray-500 ease-in-out duration-200">
-            <a href="/services">SERVICES</a>
+          <button
+            className="hover:text-gray-500 ease-in-out duration-200"
+          >
+            <a href = "/services">SERVICES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
-            <a href="/articles">ARTICLES</a>
+            <a href = "/articles">ARTICLES</a>
           </button>
           <button className="hover:text-gray-500 ease-in-out duration-200">
             CONTACT
@@ -238,15 +230,7 @@ const ArticlesPage = () => {
 
         <div className="flex flex-row justify-center -mt-4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-rows-3 gap-5 pt-16 h-fit text-white">
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
-            <div>{Cards(0)}</div>
+            <div><a href = "./credit"> {Cards(0)}</a></div>
           </div>
         </div>
         <div className="flex flex-row justify-center">

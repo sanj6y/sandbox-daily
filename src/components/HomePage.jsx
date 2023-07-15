@@ -83,7 +83,7 @@ const HomePage = () => {
       {/* NAVBAR */}
       <nav className="fixed flex justify-between top-0 z-50 w-full rounded-b-2xl py-2 px-6 border-b-2 bg-gray-50 bg-opacity-75">
         <div className="flex items-center md:pl-32 ease-in-out duration-300">
-          <img src={logo} alt="sandbox-logo" className="w-12"/>
+        <a href = "/home"><img src={logo} alt="sandbox-logo" className="w-12"/></a>
           <h1 className = "font-bold text-3xl tracking-wide px-4">
              Sandbox
           </h1>
@@ -104,11 +104,11 @@ const HomePage = () => {
         >
           <div className="flex flex-col justify-center">
             <ul className="text-xl font-medium">
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">HOME</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ABOUT</li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">HOME</li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ABOUT</li>
               <li href="/services" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">SERVICES</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ARTICLES</li>
-              <li className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">CONTACT</li>
+              <li href = "/articles" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">ARTICLES</li>
+              <li href = "/home" className="w-fit p-4 hover:cursor-pointer hover:text-gray-500 ease-in-out duration-200">CONTACT</li>
             </ul>
           </div>
         </div>
@@ -151,7 +151,7 @@ const HomePage = () => {
       </div>
 
       {/* ABOUT PAGE */}
-      <div className="h-screen flex flex-col items-center justify-center text-center border-b-8 bg-white">
+      <div id = "about" className="h-screen flex flex-col items-center justify-center text-center border-b-8 bg-white">
         <h1 className="md:text-6xl  sm:text-5xl text-4xl font-bold text-black">
           Become Financially Literate.
         </h1>
@@ -162,7 +162,7 @@ const HomePage = () => {
         </p>
       </div>
 
-      {/* PAST ARTICLES PAGE */}
+      {/* PAST ARTICLES PAGE }
       <div className="relative border-b-8 bg-gray-50">
         <div className="text-center mt-16 text-5xl font-bold">
           Take a look at our previous Articles.
@@ -201,7 +201,7 @@ const HomePage = () => {
             <Cards />
           </div>
         </div>
-      </div>
+        </div>*/}
 
       {/* FOOTER */}
       <div className="bg-gray-50 w-screen">
